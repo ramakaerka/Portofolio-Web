@@ -1,0 +1,1410 @@
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(135deg, #010030 0%, #160078 40%, #7226ff 100%);
+}
+
+.profil-container a {
+  text-decoration: none;
+}
+.icon-a {
+  margin-top: 20px;
+  width: clamp(20px, 6vw, 40px);
+  height: clamp(20px, 6vw, 40px);
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.icon-a:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+.btn-contact {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2),
+    0 0 60px rgba(139, 92, 246, 0.1);
+  text-decoration: none;
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  backdrop-filter: blur(10px);
+  width: 50%;
+}
+
+.btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.4),
+    0 0 90px rgba(139, 92, 246, 0.2);
+  background: linear-gradient(135deg, #9333ea 0%, #8b5cf6 100%);
+}
+.btn-contact:active {
+  transform: translateY(0px);
+}
+
+.sparkle-icon {
+  font-size: 20px;
+  animation: sparkle 2s ease-in-out infinite;
+}
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1) rotate(180deg);
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "content skill"
+    "resume resume"
+    "portofolio portofolio";
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1400px; /* BATASAN MAKSIMAL LEBAR */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.header-saya {
+  grid-area: header;
+  position: sticky;
+  width: 100%; /* MENGIKUTI LEBAR GRID CONTAINER */
+  height: 60px;
+  top: 0;
+  z-index: 3;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(135deg, #394453 0%, #2e3950 100%);
+  text-align: center;
+  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.6);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-sizing: border-box; /* PENTING: agar padding dan border termasuk dalam lebar */
+}
+
+.navbar-saya {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* penuh parent */
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+
+.menu-nav li a {
+  text-decoration: none;
+  font-size: larger;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-nav li a:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+  color: rgb(229, 255, 135);
+}
+.menu-nav li a.active {
+  font-weight: bolder;
+  color: #eeff90 !important;
+  border-bottom: 2px solid #ffed89 !important;
+  z-index: 1000;
+}
+
+main {
+  grid-area: content;
+  padding: 50px 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  color: yellow;
+  border-radius: 10px;
+  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+main p,
+main span {
+  color: white;
+}
+
+.section-portofolio {
+  grid-area: portofolio;
+  margin: auto;
+  padding: 20px auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #e7f5ff00, #ffffff00);
+}
+
+.portofolio-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  color: white;
+}
+
+.portofolio-content {
+  padding: 0;
+  margin: 0 0;
+  box-sizing: border-box;
+}
+
+.portofolio-content .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.portofolio-content .col-8 {
+  padding: 20px;
+}
+.portofolio-content .col,
+.portofolio-content p {
+  font-size: 18px;
+  text-align: start;
+  margin: 30px auto;
+  align-items: center;
+  align-content: center;
+}
+
+.portofolio-content .col .btn-contact {
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.frame-img-portofolio {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.img-portofolio {
+  width: 90%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s ease-in-out;
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
+}
+.img-portofolio:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 5px 5px rgba(126, 123, 145, 0.993));
+}
+.portofolio-header {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.portofolio-header h4 {
+  width: 20%;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  border-bottom: 5px solid rgb(199, 58, 255);
+  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
+}
+.portofolio-header p {
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+}
+.portofolio-header h5 {
+  width: 20%;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  border-bottom: 3px solid black;
+}
+.section-resume {
+  grid-area: resume;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #200487;
+  border-radius: 20px;
+  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.resume-container {
+  display: grid;
+  grid-template-areas:
+    "desc desc"
+    "detail detail";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0;
+  padding: 20px;
+  margin: 0;
+  max-width: 1400px; /* BATASAN MAKSIMAL LEBAR */
+  width: 100%;
+  height: 100%;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.desc {
+  grid-area: desc;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  padding: 0;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background: linear-gradient(180deg, #e7f5ff00, #ffffff00);
+  box-sizing: border-box;
+}
+
+.deskripsi-resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* penuh parent */
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.detail {
+  grid-area: detail;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.detail-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.row-detail {
+  padding: 0;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.row-detail .col-4 {
+  border-right: 1px solid rgb(255, 255, 255);
+}
+
+.row-detail:first-child {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  margin-bottom: 30px;
+}
+
+.resume-item1 {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 30px;
+  box-sizing: border-box;
+  text-align: start;
+  border-bottom: 1px solid white;
+}
+.resume-item2 {
+  margin: auto 20px;
+  padding: 0 0 0 10px;
+  box-sizing: border-box;
+  text-align: start;
+}
+
+.highlight {
+  background-color: #e6ff03;
+  color: black;
+  border-radius: 10px;
+  padding: 2px;
+  font-weight: 600;
+  width: 47%;
+  text-align: center;
+}
+.highlight2 {
+  background-color: #e6ff03;
+  color: black;
+  border-radius: 10px;
+  padding: 2px;
+  font-weight: 600;
+  width: 80%;
+  text-align: center;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 24px;
+}
+.resume-item2 h4 {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 20px 0;
+}
+.resume-item1 ul li p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-align: start;
+  line-height: 30px;
+  height: 100%;
+}
+.resume-item2 ul li p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-align: start;
+  line-height: 30px;
+  height: 100%;
+}
+
+.skills {
+  grid-area: skill;
+  width: 100%;
+  padding: 50px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  color: yellow;
+}
+.skills-container {
+  padding: 20px 0;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.skills thead,
+.skills tbody {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.skills tr {
+  display: flex;
+  flex-direction: row; /* untuk mengatur th/td secara horizontal */
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 20px;
+}
+
+.skills p {
+  margin-top: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.grid-frame {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  background: linear-gradient(50deg, #0110291f, #7152fddc);
+  padding: 0;
+  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.frame {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #e7f5ff00, #ffffff00);
+  font-family: Arial, sans-serif;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.frame .foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  object-position: top;
+}
+
+.profil-container {
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  box-sizing: border-box;
+}
+
+.profil-container .col {
+  width: 800px;
+  margin-right: 0;
+}
+
+.profil-container p {
+  font-size: 18px;
+  line-height: 2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.profil-container span {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #f0e665;
+  margin-bottom: 3px;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.icon-text-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.icon {
+  width: clamp(20px, 6vw, 60px);
+  height: clamp(20px, 6vw, 60px);
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+.icon:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+/* Media Queries untuk Responsivitas */
+/* Media Queries untuk Mobile Responsive Design */
+
+/* Responsif untuk layar di atas 1024px sampai 1208px */
+@media (min-width: 1025px) and (max-width: 1208px) {
+  .grid-container {
+    grid-template-areas:
+      "header header"
+      "content content"
+      "skill skill"
+      "resume resume"
+      "portofolio portofolio";
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  main {
+    grid-area: content;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profil-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Tambahkan gap pada .profil-container .row untuk memberi jarak antara tulisan dan foto */
+  .profil-container .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Atur sesuai kebutuhan, misal 48px */
+  }
+  .profil-container .col {
+    width: 50vw;   /* Ubah dari 800px menjadi setengah layar */
+    max-width: 500px; /* Batas maksimal agar tidak terlalu lebar */
+    min-width: 320px;
+  }
+
+  .grid-frame {
+    margin: 0;
+  }
+
+  .highlight {
+    width: 350px;
+  }
+  .highlight2 {
+    width: 270px;
+  }
+  .skills {
+    grid-area: skill;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .skills-container .row {
+    text-align: center;
+  }
+  .skills-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+/* Tablet dan iPad (768px - 1024px) */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "skill"
+      "resume"
+      "portofolio";
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  main {
+    padding-bottom: 20px;
+  }
+
+  .profil-container .row {
+    width: 100%;
+  }
+  .profil-container .col {
+    width: 500px;
+    height: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+  }
+
+  .profil-container p {
+    width: 500px;
+  }
+  .grid-frame {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+  }
+  .frame {
+    width: 100%;
+    height: 100%;
+  }
+  .foto {
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn-contact {
+    width: 40%;
+    justify-content: center;
+  }
+
+  /* Skills section untuk tablet */
+  .skills {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+  .skills-container {
+    text-align: center;
+    padding: 0;
+  }
+  .skills-container .row h1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+  }
+  .skills tr {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .icon {
+    width: clamp(40px, 8vw, 50px);
+    height: clamp(40px, 8vw, 50px);
+  }
+
+  /* Resume Section */
+  .deskripsi-resume {
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+  }
+  .row-detail {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .row-detail .col-4 {
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+  }
+  .row-detail .col-4,
+  .row-detail .col-8 {
+    width: 100%;
+    border-right: 0;
+  }
+
+  .highlight {
+    width: 60%;
+  }
+  .highlight2 {
+    width: 50%;
+  }
+
+  /* Portofolio Section*/
+  .portofolio-content .row {
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  .portofolio-content .col-8,
+  .portofolio-content .col {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .portofolio-content .col .btn-contact {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 14px 10px;
+    font-size: 16px;
+    justify-content: center;
+  }
+  .portofolio-content p {
+    padding: 20px 20px 10px 20px;
+    font-size: 16px;
+  }
+  .portofolio-content h4 {
+    padding: 0 20px 0 20px;
+    font-size: 20px;
+  }
+  .frame-img-portofolio {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsif untuk layar di atas 768px sampai 920px */
+@media (min-width: 769px) and (max-width: 920px) {
+  .grid-container {
+    grid-template-areas:
+      "header header"
+      "content content"
+      "skill skill"
+      "resume resume"
+      "portofolio portofolio";
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  main {
+    grid-area: content;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profil-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profil-container .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Sedikit lebih kecil dari desktop */
+    margin: 0;
+  }
+  .profil-container .col {
+    max-width: 450px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profil-container h1 {
+    font-size: 28px;
+  }
+  .profil-container p {
+    width: 400px;
+    margin-bottom: 10px;
+  }
+  .btn-contact {
+    width: 210px;
+  }
+
+  .grid-frame {
+    width: 250px;
+    height: 250px;
+    margin: 0;
+  }
+
+  .skills {
+    grid-area: skill;
+    width: 100%;
+    margin: 0 auto 24px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+  }
+  .skills-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .skills-container .row {
+    text-align: center;
+  }
+}
+
+/* Mobile Landscape (576px - 768px) */
+@media (max-width: 768px) {
+  * {
+    outline: none !important;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  /* Header Navigation */
+  .header-saya {
+    height: auto;
+    min-height: 50px;
+    padding: 0 20px;
+  }
+
+  .menu-nav {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .menu-nav li a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  /* Main content */
+  main {
+    padding: 20px 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .profil-container .col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .profil-container p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .profil-container span {
+    font-size: 16px;
+  }
+
+  /* Photo frame */
+  .grid-frame {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 20px auto;
+    order: -1; /* Photo akan muncul di atas */
+  }
+
+  /* Button contact */
+  .btn-contact {
+    width: 40%;
+
+    margin: 20px auto;
+    padding: 14px 24px;
+    font-size: 16px;
+    justify-content: center;
+  }
+
+  /* Social icons */
+  .icon-a {
+    width: 35px;
+    height: 35px;
+    margin: 10px 5px;
+  }
+
+  /* Skills section */
+  .skills {
+    padding: 0px 10px;
+  }
+
+  .skills-container {
+    padding: 0;
+  }
+
+  .skills tr {
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+  }
+
+  .skills th {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+
+  .skills p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* Resume section */
+  .section-resume {
+    height: auto;
+    min-height: 500px;
+  }
+
+  .resume-container {
+    grid-template-areas:
+      "desc"
+      "detail";
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .desc {
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .detail-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .row-detail {
+    flex-direction: column;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .row-detail .col-4,
+  .row-detail .col {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .resume-item1,
+  .resume-item2 {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .resume-item2 h4 {
+    font-size: 18px;
+  }
+
+  .highlight,
+  .highlight2 {
+    width: auto;
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  /* Portfolio section */
+  .portofolio-header h4 {
+    width: 50%;
+    font-size: 20px;
+  }
+
+  .portofolio-header p {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .frame-img-portofolio {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .img-portofolio {
+    width: 100%;
+    height: 70%;
+  }
+  .portofolio-content .row {
+    flex-direction: column;
+  }
+
+  .portofolio-content .col-8,
+  .portofolio-content .col {
+    padding: 0 30px 0 30px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .portofolio-content p {
+    padding: 20px 20px 10px 20px;
+    font-size: 16px;
+  }
+  .portofolio-content h4 {
+    padding: 0 20px 0 20px;
+    font-size: 20px;
+  }
+}
+
+/* Mobile Portrait (320px - 576px) */
+@media (max-width: 576px) {
+  /* Responsive layout for small phones (320px - 576px) */
+  * {
+    outline: none !important;
+  }
+
+  html, body {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(135deg, #010030 0%, #160078 40%, #7226ff 100%);
+  }
+
+  .grid-container {
+    width: 100% !important;
+    max-width: 100%;
+    padding: 0 8px;
+    gap: 12px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "skill"
+      "resume"
+      "portofolio";
+  }
+
+  /* Header */
+  .header-saya {
+    height: auto;
+    min-height: 48px;
+    padding: 0 8px;
+    border-radius: 0 0 10px 10px;
+    font-size: 15px;
+  }
+
+  .navbar-saya {
+    padding: 0;
+  }
+
+  .menu-nav {
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-nav li a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  /* Main content */
+  main {
+    padding: 12px 0 0 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .profil-container {
+    padding: 8px 0;
+    margin-bottom: 10px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .profil-container .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .profil-container .col {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 4px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profil-container p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .profil-container span {
+    font-size: 13px;
+    color: #f0e665;
+  }
+
+  /* Photo frame */
+  .grid-frame {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 10px auto;
+    border-radius: 12px;
+  }
+  .frame {
+    border-radius: 12px;
+  }
+  .frame .foto {
+    border-radius: 12px;
+  }
+
+  /* Button contact */
+  .btn-contact {
+    width: 90%;
+    min-width: 120px;
+    max-width: 220px;
+    padding: 10px 0;
+    font-size: 13px;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+
+  .sparkle-icon {
+    font-size: 15px;
+  }
+
+  /* Social icons */
+  .icon-a-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .icon-a {
+    width: 28px;
+    height: 28px;
+    margin: 0 2px;
+  }
+
+  /* Skills section */
+  .skills {
+    padding: 8px 2px;
+    margin: 0;
+    border-radius: 10px;
+    align-items: center;
+  }
+  .skills-container {
+    padding: 0;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .skills-container .row h1 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .skills tr {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills th {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+  }
+  .skills p {
+    font-size: 11px;
+    margin: 0;
+  }
+
+  /* Resume section */
+  .section-resume {
+    height: auto;
+    min-height: 300px;
+    border-radius: 10px;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+  .resume-container {
+    grid-template-areas:
+      "desc"
+      "detail";
+    grid-template-columns: 1fr;
+    padding: 8px;
+    border-radius: 10px;
+  }
+  .desc {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    margin-bottom: 0;
+    text-align: center;
+    border-bottom: 1px solid #fff2;
+    padding: 0 0 6px 0;
+  }
+  .desc h4 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .desc p {
+    font-size: 12px;
+    margin: 0;
+  }
+  .detail-container {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+  .row-detail {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+  .row-detail .col-4,
+  .row-detail .col {
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+  .resume-item1,
+  .resume-item2 {
+    margin: 0;
+    padding: 6px 0;
+  }
+  .resume-item1 h4,
+  .resume-item2 h4 {
+    font-size: 13px;
+    margin: 0 0 4px 0;
+  }
+  .resume-item1 p,
+  .resume-item2 p,
+  .resume-item2 ul li p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+  }
+  .highlight,
+  .highlight2 {
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    width: auto;
+    display: inline-block;
+    margin: 2px 0;
+  }
+
+  /* Portfolio section */
+  .portofolio-header {
+    padding: 8px 0;
+    margin-bottom: 4px;
+  }
+  .portofolio-header h4 {
+    width: 90%;
+    font-size: 15px;
+    margin: 10px auto 4px auto;
+    padding-bottom: 6px;
+    border-bottom-width: 2px;
+  }
+  .portofolio-header p {
+    width: 98%;
+    font-size: 12px;
+    margin: 0 auto 6px auto;
+  }
+  .frame-img-portofolio {
+    min-height: 200px;
+    max-height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .img-portofolio {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .portofolio-content {
+    padding: 0 15px;
+  }
+  .portofolio-content .row {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+  .portofolio-content .col-8,
+  .portofolio-content .col {
+    padding: 0 2px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .portofolio-content .col h4 {
+    font-size: 13px;
+    margin: 0 0 4px 0;
+  }
+  .portofolio-content .col p {
+    font-size: 11px;
+    margin: 0 0 6px 0;
+    text-align: center;
+  }
+  .portofolio-content .col .btn-contact {
+    width: 90%;
+    max-width: 160px;
+    margin: 8px auto;
+    padding: 8px 0;
+    font-size: 12px;
+    justify-content: center;
+  }
+}
+
+/* Extra Small Mobile (max 320px) */
+
+/* Perbaikan untuk layout flexbox pada mobile */

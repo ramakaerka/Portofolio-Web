@@ -1,0 +1,567 @@
+/* CSS Media Queries - Versi Diperbaiki */
+/* Reset dan base styles */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet dan iPad (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "skill"
+      "resume"
+      "portofolio";
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .profil-container .col {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .grid-frame {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+  }
+
+  .btn-contact {
+    width: 80%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  /* Skills section untuk tablet */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .skills .table-responsive {
+    overflow: visible;
+  }
+
+  .skills table,
+  .skills thead,
+  .skills tbody,
+  .skills tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .skills th {
+    flex: 0 0 calc(25% - 20px);
+    min-width: 100px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+  }
+
+  .icon {
+    width: clamp(40px, 8vw, 50px);
+    height: clamp(40px, 8vw, 50px);
+  }
+}
+
+/* Mobile Landscape dan Portrait (max-width: 768px) */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  /* Header Navigation */
+  .header-saya {
+    height: auto;
+    min-height: 50px;
+    padding: 5px 0;
+  }
+
+  .menu-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-nav li a {
+    font-size: 14px;
+    padding: 8px 12px;
+    display: block;
+  }
+
+  /* Main content */
+  main {
+    padding: 20px 0;
+  }
+
+  h1 {
+    font-size: clamp(20px, 5vw, 24px);
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  /* Profil container - perbaikan layout */
+  .profil-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .profil-container .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .profil-container .col {
+    order: 2;
+    text-align: center;
+    width: 100%;
+  }
+
+  .profil-container p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+
+  .profil-container span {
+    font-size: 16px;
+  }
+
+  /* Photo frame */
+  .grid-frame {
+    order: 1;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px auto;
+    flex-shrink: 0;
+  }
+
+  /* Button contact */
+  .btn-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto;
+    padding: 14px 24px;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .sparkle-icon {
+    margin-right: 8px;
+  }
+
+  /* Social icons */
+  .icon-a-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .icon-a {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Skills section - Perbaikan utama */
+  .skills {
+    padding: 30px 10px;
+    width: 100%;
+  }
+
+  .skills h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .skills .table-responsive {
+    overflow: visible;
+  }
+
+  .skills table {
+    width: 100%;
+    border: none;
+  }
+
+  .skills thead,
+  .skills tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .skills tr {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+    border: none;
+  }
+
+  .skills th {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    padding: 15px 5px;
+    background: none;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+    object-fit: contain;
+  }
+
+  .skills p {
+    font-size: 14px;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  /* Resume section */
+  .section-resume {
+    height: auto;
+    min-height: 500px;
+  }
+
+  .resume-container {
+    display: grid;
+    grid-template-areas:
+      "desc"
+      "detail";
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .desc {
+    grid-area: desc;
+    width: 100%;
+    text-align: center;
+  }
+
+  .detail {
+    grid-area: detail;
+  }
+
+  .detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .row-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .row-detail .col-4,
+  .row-detail .col {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .row-detail .col:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .resume-item1,
+  .resume-item2 {
+    margin-bottom: 20px;
+  }
+
+  .resume-item2 h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .highlight,
+  .highlight2 {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  /* Portfolio section */
+  .portofolio-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .portofolio-header h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .portofolio-header p {
+    font-size: 16px;
+  }
+
+  .frame-img-portofolio {
+    height: 300px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .portofolio-content .row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .portofolio-content .col-8,
+  .portofolio-content .col {
+    width: 100%;
+  }
+
+  /* Card responsif untuk portfolio */
+  .card {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+
+  .carousel-inner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+/* Mobile Portrait kecil (max-width: 576px) */
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  .grid-container {
+    padding: 5px;
+    gap: 15px;
+  }
+
+  /* Header */
+  .header-saya {
+    padding: 8px 0;
+  }
+
+  .menu-nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .menu-nav li a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  /* Main content */
+  h1 {
+    font-size: clamp(18px, 5vw, 20px);
+  }
+
+  .profil-container p,
+  .profil-container span {
+    font-size: 14px;
+  }
+
+  /* Photo frame */
+  .grid-frame {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Button contact */
+  .btn-contact {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  /* Social icons */
+  .icon-a {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Skills */
+  .skills {
+    padding: 20px 5px;
+  }
+
+  .skills tr {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 15px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skills p {
+    font-size: 12px;
+  }
+
+  /* Resume */
+  .resume-container {
+    padding: 10px;
+  }
+
+  .desc h4 {
+    font-size: 18px;
+  }
+
+  .desc p {
+    font-size: 14px;
+  }
+
+  .resume-item2 h4 {
+    font-size: 16px;
+  }
+
+  .resume-item1 p,
+  .resume-item2 p,
+  .resume-item2 ul li p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .highlight,
+  .highlight2 {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  /* Portfolio */
+  .portofolio-header h4 {
+    font-size: 18px;
+  }
+
+  .portofolio-header p {
+    font-size: 14px;
+  }
+
+  .frame-img-portofolio {
+    height: 200px;
+  }
+
+  .card {
+    max-width: 320px !important;
+  }
+
+  .carousel-inner img {
+    height: 160px;
+  }
+}
+
+/* Extra Small Mobile (max-width: 320px) */
+@media (max-width: 320px) {
+  .grid-container {
+    padding: 3px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  .profil-container p,
+  .profil-container span {
+    font-size: 13px;
+  }
+
+  .grid-frame {
+    width: 120px;
+    height: 120px;
+  }
+
+  .btn-contact {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .skills tr {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .skills p {
+    font-size: 11px;
+  }
+}
+
+/* Orientasi landscape pada mobile */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 768px) {
+  .profil-container .row {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .grid-frame {
+    order: 0;
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .profil-container .col {
+    order: 0;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .profil-container p {
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .skills tr {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+}

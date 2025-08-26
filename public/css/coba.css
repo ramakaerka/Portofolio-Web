@@ -1,0 +1,492 @@
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "content foto"
+    "resume resume";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  gap: 0;
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1400px; /* BATASAN MAKSIMAL LEBAR */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+}
+
+.header-saya {
+  grid-area: header;
+  position: sticky;
+  width: 100%; /* MENGIKUTI LEBAR GRID CONTAINER */
+  height: 60px;
+  top: 0;
+  z-index: 3;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(135deg, #f1eff3 0%, #d6dae2 100%);
+  text-align: center;
+  border: 1px solid rgb(189, 189, 189);
+  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-sizing: border-box; /* PENTING: agar padding dan border termasuk dalam lebar */
+}
+
+.navbar-saya {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* penuh parent */
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  /* background: linear-gradient(135deg, #e9dff3 0%, #cddaf1 100%); */
+  box-sizing: border-box;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+
+.menu-nav li a {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-nav li a:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+  color: blue;
+}
+.menu-nav li a.active {
+  font-weight: bolder;
+  color: #0d6efd !important;
+  border-bottom: 2px solid #0d6efd !important;
+  z-index: 4;
+}
+
+main {
+  grid-area: content;
+  margin: 0;
+  padding: 50px 0 20px 20px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #e7f5ff80, #fff);
+  border-radius: 10px;
+  box-shadow: 0 6px 6px -6px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+}
+
+.section-resume {
+  grid-area: resume;
+  margin: 20px auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 6px -6px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+  
+}
+
+.resume-container {
+  display: grid;
+  grid-template-areas:
+    "desc desc"
+    "detail detail"
+    "detail detail";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1400px; /* BATASAN MAKSIMAL LEBAR */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #e7f5ff80, #fff);
+  
+}
+
+.desc {
+  grid-area: desc;
+  width: 95%;
+  height: 120px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  background: white;
+  border-bottom: 1px solid black;
+  background: linear-gradient(180deg, #e7f5ff80, #fff);
+  box-sizing: border-box;
+}
+
+.deskripsi-resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* penuh parent */
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.detail {
+  grid-area: detail;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.detail-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.row-detail {
+  padding: 0;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+
+.resume-item1 {
+  margin: auto 20px;
+  padding: 0 0 30px 30px;
+  box-sizing: border-box;
+  text-align: end;
+
+}
+.resume-item2 {
+  margin: auto 20px;
+  padding: 0 0 0 30px;
+  box-sizing: border-box;
+  border-left: 1px solid rgb(119, 119, 119);
+  text-align: start;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 24px;
+}
+.resume-item2 h4 {
+  font-weight: 500;
+  font-size: 24px;
+}
+.resume-item1 ul li p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 30px;
+    height: 100%;
+}
+.resume-item2 ul li p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 30px;
+    height: 100%;
+}
+
+.grid-frame {
+  grid-area: foto;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #e7f5ff80, #fff);
+  box-shadow: 0 6px 6px -6px rgba(0,0,0,0.4);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.frame {
+  /* grid-area: foto; */
+  width: 100%;
+  height: 450px;
+  border: 0px solid #333;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #e7f5ff80, #fff);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  font-family: Arial, sans-serif;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.frame .foto {
+  width: 130%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  object-position: top;
+}
+
+.profil-container {
+  padding: 10px 0;
+  width: 100%;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+span {
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.icon-text-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-areas:
+      "header"
+      "foto"
+      "content"
+      "resume";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .section-resume {
+    grid-area: resume;
+    width: inherit;
+    height: 100vh;
+    margin: 20px auto;
+  padding: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  .resume-container {
+    display: grid;
+  grid-template-areas:
+    "desc desc"
+    "detail detail";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1400px; /* BATASAN MAKSIMAL LEBAR */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  }
+
+  .desc {
+  grid-area: desc;
+  width: 95%;
+  height: 80px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  background: white;
+  border-bottom: 1px solid black;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  box-sizing: border-box;
+}
+
+.deskripsi-resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* penuh parent */
+  height: 100%;
+  padding: 0;
+  /* border-radius: 10px; */
+  /* background: linear-gradient(135deg, #e9dff3 0%, #cddaf1 100%); */
+  box-sizing: border-box;
+}
+
+.detail {
+  grid-area: detail;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  
+}
+.detail-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.row-detail {
+  padding: 20px;
+  margin: auto 10px;
+  height: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+
+.resume-item {
+  /* height: 100%; */
+  margin: auto 20px;
+  padding: 0 0 30px 30px;
+  box-sizing: border-box;
+  border-left: 3px solid blue;
+
+}
+
+.resume-item ul li {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 40px;
+}
+
+  .header-saya {
+    width: 100%;
+    position: sticky;
+    top: 0;
+  }
+
+  .navbar-saya {
+    padding: 8px;
+  }
+
+  .menu-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .menu-nav li a {
+    font-size: 16px;
+  }
+
+  .frame {
+    width: 60%;
+    height: 450px;
+    margin: 0 auto;
+    border-radius: 50px;
+  }
+  .frame .foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    object-position: top;
+  }
+  
+  p,
+  span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .header-saya {
+    height: auto;
+    min-height: 60px;
+  }
+
+  .navbar-saya {
+    padding: 5px;
+  }
+
+  .menu-nav {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .menu-nav li a {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .frame {
+    width: 50%;
+    height: 350px;
+  }
+
+  main {
+    padding: 15px;
+  }
+}
+
+.debug-info {
+  background: #e9ecef;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-family: monospace;
+}

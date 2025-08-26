@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('landing_page');
+});
+
+Route::get('/leave_system', function () {
+    return view('projects.leave_system');
 });
 
 Route::get('/dashboard', function () {

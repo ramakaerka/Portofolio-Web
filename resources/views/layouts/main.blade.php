@@ -11,21 +11,59 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    @vite(['resources/css/coba.css', 'resources/css/bingkai.css', 'resources/js/script.js'])
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
 
-    <div class="container vh-100 p-4">
-            @include('layouts.navbar')
-            <main>            
-                @yield('content')
-            </main>
+    <div class="grid-container">
+        <header class="header-saya">
+            <nav class="navbar-saya">
+                <ul class="menu-nav">
+                    <li>
+                        <a class="active" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#resume">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#portofolio">Portofolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-home" id="home">
+            @yield('content')
+        </main>
+
+        <div class="section-resume" id="resume">
+            <div class="resume-container">
+
+                @yield('resume')
+
+            </div>
+        </div>
+
+        <div class="section-portofolio" id="portofolio">
+            <div class="portofolio-container">
+                @yield('portofolio')
+            </div>
+        </div>
+        @yield('foto')
     </div>
+    
+  
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

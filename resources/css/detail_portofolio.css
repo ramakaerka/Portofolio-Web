@@ -1,0 +1,248 @@
+/* Base styles */
+html, body 
+{
+    color: white;
+}
+
+.detail-portofolio-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.detail-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.detail-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+/* Carousel styling */
+.carousel {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-inner {
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed from cover to contain */
+  max-height: 600px; /* Maximum height for large screens */
+}
+
+/* Content layout */
+.row {
+  display: grid;
+  gap: 30px;
+}
+
+/* Base styles - Desktop Large default */
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 1.2em;
+}
+
+/* Media Queries */
+/* Desktop Large (1200px and up) */
+@media (min-width: 1200px) {
+  .detail-portofolio-container {
+    padding: 40px;
+  }
+  
+  .row.justify-content-between {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Desktop (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .detail-portofolio-container {
+    padding: 30px;
+  }
+  
+  .row.justify-content-between {
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+  }
+  .carousel-inner {
+    max-height: 500px;
+  }
+  .carousel-inner img {
+    max-height: 500px;
+  }
+  
+  p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Tablet Landscape (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .detail-portofolio-container {
+    padding: 25px;
+  }
+  
+  .detail-content {
+    padding: 20px;
+  }
+  
+  .row.justify-content-between {
+    grid-template-columns: 2fr 1fr; /* Ubah ke 2 kolom */
+    gap: 20px;
+  }
+
+  .carousel-inner {
+    max-height: 400px;
+  }
+  
+  .carousel-inner img {
+    max-height: 400px;
+  }
+
+  /* Reset width dan padding */
+  .row.justify-content-between .col-8,
+  .row.justify-content-between .col {
+    width: auto;
+    padding: initial;
+  }
+
+  /* Tambahan styling untuk konten */
+  .detail-content p,
+  .detail-content h4 {
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* Tablet Portrait (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .detail-portofolio-container {
+    padding: 15px;
+  }
+  
+  .detail-content {
+    padding: 15px;
+    border-radius: 15px;
+  }
+  
+  .carousel {
+    border-radius: 10px;
+  }
+  
+  .row.justify-content-between {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .row.justify-content-between .col-8,
+  .row.justify-content-between .col {
+    width: 100%;
+    padding: 0;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile (575px and below) */
+@media (max-width: 575px) {
+  .detail-portofolio-container {
+    padding: 10px;
+  }
+  
+  .detail-content {
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  .carousel {
+    border-radius: 8px;
+  }
+  
+  .row.justify-content-between {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .row.justify-content-between .col-8,
+  .row.justify-content-between .col {
+    width: 100%;
+    padding: 0;
+  }
+
+  .detail-content p,
+  .detail-content h4 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* Extra Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  .detail-portofolio-container {
+    padding: 8px;
+  }
+  
+  .detail-content {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .carousel-inner {
+    max-height: 200px;
+  }
+  .carousel-inner img {
+    max-height: 200px;
+  }
+
+  .row.justify-content-between .col-8,
+  .row.justify-content-between .col {
+    width: 100%;
+    padding: 0;
+  }
+
+  .detail-content p,
+  .detail-content h4 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+}
