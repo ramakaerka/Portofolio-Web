@@ -5,13 +5,13 @@
                         <a class="active" href="/">Home</a>
                     </li>
                     <li>
-                        <a href="#resume">Resume</a>
+                        <a href="/#resume">Resume</a>
                     </li>
                     <li>
-                        <a href="#portofolio">Portofolio</a>
+                        <a href="/#portofolio">Portofolio</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="/#contact">Contact</a>
                     </li>
                 </ul>
             </nav>

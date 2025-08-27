@@ -6,7 +6,7 @@
                 <h1>Rama Kadi Rawi Kuncaranto</h1>
                 <p>I'm a <span>Junior Fullstack Web Developer</span></p>
                 <p>Information Systems graduates who have passion and experience in the field of web development</p>
-                <a href="#contact" class="btn-contact">
+                <a href="#exampleFormControlInput1" class="btn-contact">
                     <span class="sparkle-icon">✨</span>
                     Contact Me
                 </a>
@@ -93,8 +93,7 @@
 @section('portofolio')
     <div class="portofolio-header">
         <h4>Projects</h4>
-        <p>Here you will find some of the personal and clients projects that I created with each project containing its own
-            case study</p>
+        <p>Here you will find some of the personal and clients projects that I created</p>
     </div>
     <div class="portofolio-content">
         <div class="row">
@@ -104,10 +103,8 @@
                 </div>
             </div>
             <div class="col">
-                <h4>Sistem Informasi Pengajuan Cuti Karyawan Berbasis Web Rumah Sakit Condong Catur</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repellat odio impedit aperiam obcaecati
-                    reiciendis magni placeat totam voluptate autem. Dicta iste provident aspernatur nihil fugit hic debitis
-                    cupiditate non.</p>
+                <h4>Web Based Employee Leave Application Information System</h4>
+                <p>This web-based information system was created to meet the needs of organizations for leave management, leave application and leave approval processes.</p>
                 <a href="/leave_system" class="btn-contact">View Project</a>
             </div>
         </div>
@@ -185,108 +182,6 @@
         </div>
     </div>
 @endsection
-
-{{--  
-@section('portofolio')
-    <section id="portofolio" class="portofolio-section">
-
-        <div class="portofolio-content">
-            <div class="container text-center">
-                <div class="row">
-                    <h1>My Projects</h1>
-                    <p class="mb-5">This is the Portofolio section.</p>
-
-                   
-                    <div class="col">
-                        <div class="card mx-auto" style="width: 600px; height: auto;">
-                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="../img/asset1/Dashboard.png" class="d-block w-100" alt="Slide 1">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../img/asset1/Pengajuan.png" class="d-block w-100" alt="Slide 2">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../img/asset1/Persetujuan.png" class="d-block w-100" alt="Slide 3">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <div class="card-body mt-3">
-                                <h5 class="card-title">Sistem Informasi Pengajuan Cuti Karyawan</h5>
-                                <p class="card-text"><small>Build with <strong>Laravel 10</strong></small></p>
-                                <a href="/leave_system" class="btn btn-primary"><i
-                                        class="lni lni-eye"></i><small>Detail</small></a>
-                            </div>
-                        </div>
-                    </div>
-
-                   
-                    <div class="col">
-                        <div class="card mx-auto" style="width: 600px;">
-                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="0" class="active" aria-current="true"
-                                        aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="../img/white2.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../img/white2.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../img/white2.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Web Company Profile RSCC</h5>
-                                <p class="card-text"><small>Build with <strong>Laravel 10</strong></small></p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-@endsection --}}
 
 @section('contact')
     <section id="contact" class="section">

@@ -30,9 +30,12 @@ html, body
   width: 100%;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
 }
 
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: white;
+}
 .carousel-inner {
   aspect-ratio: 16/9;
   width: 100%;
@@ -51,23 +54,46 @@ html, body
   display: grid;
   gap: 30px;
 }
+.row.justify-content-between {
+    grid-template-columns: 2fr 1fr;
+  }
 
 /* Base styles - Desktop Large default */
 p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.8;
-  margin-bottom: 1.2em;
+  margin-bottom: 5px;
+}
+
+.icon-text-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-text-container .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-text-container p {
+    margin: 0;
 }
 
 /* Media Queries */
 /* Desktop Large (1200px and up) */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
   .detail-portofolio-container {
     padding: 40px;
   }
   
   .row.justify-content-between {
     grid-template-columns: 2fr 1fr;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.7;
   }
 }
 
@@ -89,7 +115,7 @@ p {
   }
   
   p {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.7;
   }
 }

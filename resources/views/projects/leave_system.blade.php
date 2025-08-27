@@ -72,18 +72,42 @@
 
                 <div class="row justify-content-between text-start gx-4 gy-4 mt-5">
                     <div class="col-8">
-                        <h4 class="mb-4"><strong>Sistem Informasi Pengajuan Cuti Karyawan RSCC</strong></h4>
-                        <p>Sistem Informasi berbasis web ini dibuat untuk memenuhi kebutuhan organisasi untuk proses pengelolaan cuti, pengajuan cuti dan persetujuan cuti secara efektif.</p>
+                        <h4 class="mb-4"><strong>Web Based Employee Leave Application Information System</strong></h4>
+                        <p>This web-based information system was created to meet the needs of organizations for leave management, leave application and leave approval processes.</p>
 
                         <h4 class="mt-4 mb-4"><strong>Features :</strong></h4>
                         <div class="icon-text-container">
-                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon"><p>Pengajuan Cuti</p>
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon"><p>Leave Application</p>
                         </div>
                         <div class="icon-text-container">
-                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Pengajuan Cuti</p>
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Leave Approval</p>
                         </div>
                         <div class="icon-text-container">
-                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Pengajuan Cuti</p>
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Leave Data Management</p>
+                        </div>
+                        <div class="icon-text-container">
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>User & Employee Data Management</p>
+                        </div>
+                        <div class="icon-text-container">
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Notification</p>
+                        </div>
+                        <div class="icon-text-container">
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Real Time Dashboard Admin</p>
+                        </div>
+                        <div class="icon-text-container">
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Error Handling</p>
+                        </div>
+                        <div class="icon-text-container">
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Role Based Access Control</p>
+                        </div>
+                        <div class="icon-text-container">
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Multi Level Approval System</p>
+                        </div>
+                        <div class="icon-text-container">
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Automated Leave Balance Calculation</p>
+                        </div>
+                        <div class="icon-text-container">
+                            <img src="../img/icon/check.svg" width="24" height="24" alt="icon" class="d-inline"><p>Leave Letter in PDF Format</p>
                         </div>
                     </div>
                     <div class="col">

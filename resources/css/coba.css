@@ -76,18 +76,114 @@ body {
     "header header"
     "content skill"
     "resume resume"
-    "portofolio portofolio";
+    "portofolio portofolio"
+    "contact contact"
+    "footer footer";
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   row-gap: 20px;
-  padding: 0 20px 20px 20px;
-  margin-bottom: 30px;
+  padding: 0 20px 0 20px;
+  margin-bottom: 0;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1400px; /* BATASAN MAKSIMAL LEBAR */
+  max-width: 1400px;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+}
+.footer {
+  grid-area: footer;
+  background-color: #0a086b;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.footer .row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.footer .col {
+  margin: auto;
+}
+.footer .col:nth-child(1),
+.footer .col:nth-child(2) {
+  border-right: 0.5px solid rgba(255, 255, 255, 0.534);
+}
+.footer .col:nth-child(3) {
+  border-right: none;
+}
+.footer p,
+.footer a {
+  font-size: 14px;
+  margin: 0;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact {
+  grid-area: contact;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background: #200487;
+  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 1);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.form-container {
+  padding: 30px 0 0 0;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+}
+.form-container h4,
+.form-container p {
+  margin-bottom: 30px;
+}
+
+.form-container h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: yellow;
+}
+
+.form-container .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: start;
+  margin-bottom: 30px;
+}
+
+.form-container .row:last-child {
+  text-align: end;
+}
+.form-container .form-control {
+  background-color: #726ee79c;
+  color: white;
+}
+.form-control::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 1;
 }
 
 .header-saya {
@@ -173,9 +269,7 @@ main span {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
-  background: linear-gradient(180deg, #e7f5ff00, #ffffff00);
 }
 
 .portofolio-container {
@@ -215,6 +309,11 @@ main span {
   align-items: center;
   align-content: center;
 }
+.portofolio-content h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
 
 .portofolio-content .col .btn-contact {
   width: 50%;
@@ -252,11 +351,14 @@ main span {
 }
 
 .portofolio-header h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: yellow;
   width: 20%;
   margin: 20px auto;
   padding-bottom: 20px;
-  border-bottom: 5px solid rgb(199, 58, 255);
-  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
+  border-bottom: 4px solid rgb(95, 52, 253);
+  box-shadow: 0 6px 6px -6px rgba(2, 25, 126, 0.9);
 }
 .portofolio-header p {
   width: 60%;
@@ -269,14 +371,16 @@ main span {
   padding-bottom: 20px;
   border-bottom: 3px solid black;
 }
+
+/* Resume Section*/
 .section-resume {
   grid-area: resume;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  background: #200487;
   border-radius: 20px;
+  background: #200487;
   box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
 }
@@ -308,7 +412,6 @@ main span {
   margin: 20px 0;
   padding: 0;
   border-bottom: 1px solid rgb(255, 255, 255);
-  background: linear-gradient(180deg, #e7f5ff00, #ffffff00);
   box-sizing: border-box;
 }
 
@@ -322,6 +425,11 @@ main span {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+.deskripsi-resume h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: yellow;
 }
 
 .detail {
@@ -363,6 +471,10 @@ main span {
   box-sizing: border-box;
   text-align: start;
   border-bottom: 1px solid white;
+}
+.resume-item1 h4 {
+  font-size: 20px;
+  font-weight: 700;
 }
 .resume-item2 {
   margin: auto 20px;
@@ -550,9 +662,8 @@ h1 {
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
 
-/* Media Queries untuk Responsivitas */
-/* Media Queries untuk Mobile Responsive Design */
 
+/* Media Queries untuk Mobile Responsive Design */
 /* Responsif untuk layar di atas 1024px sampai 1208px */
 @media (min-width: 1025px) and (max-width: 1208px) {
   .grid-container {
@@ -561,11 +672,35 @@ h1 {
       "content content"
       "skill skill"
       "resume resume"
-      "portofolio portofolio";
+      "portofolio portofolio"
+      "contact contact"
+      "footer footer";
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
 
+  .footer {
+    width: 100%;
+  }
+  .footer .row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer .col {
+    margin: auto;
+  }
+  .footer .col:nth-child(1),
+  .footer .col:nth-child(2) {
+    border-right: 0.5px solid rgba(255, 255, 255, 0.534);
+  }
+  .footer .col:nth-child(3) {
+    border-right: none;
+  }
+  .footer p,
+  .footer a {
+    font-size: 14px;
+  }
   main {
     grid-area: content;
     width: 100%;
@@ -590,7 +725,7 @@ h1 {
     gap: 40px; /* Atur sesuai kebutuhan, misal 48px */
   }
   .profil-container .col {
-    width: 50vw;   /* Ubah dari 800px menjadi setengah layar */
+    width: 50vw; /* Ubah dari 800px menjadi setengah layar */
     max-width: 500px; /* Batas maksimal agar tidak terlalu lebar */
     min-width: 320px;
   }
@@ -623,7 +758,7 @@ h1 {
     margin: 0 auto;
   }
 }
-/* Tablet dan iPad (768px - 1024px) */
+/* Tablet dan iPad (921px - 1024px) */
 @media (max-width: 1024px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -632,11 +767,47 @@ h1 {
       "content"
       "skill"
       "resume"
-      "portofolio";
+      "portofolio"
+      "contact"
+      "footer";
     gap: 15px;
     padding: 0 15px;
   }
 
+  /* Contact Section */
+  .form-container {
+    width: 70%;
+  }
+
+  .form-container .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  /* Footer Section */
+  .footer {
+    width: 100%;
+  }
+  .footer .row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer .col {
+    margin: auto;
+  }
+  .footer .col:nth-child(1),
+  .footer .col:nth-child(2) {
+    border-right: 0.5px solid rgba(255, 255, 255, 0.534);
+  }
+  .footer .col:nth-child(3) {
+    border-right: none;
+  }
+  .footer p,
+  .footer a {
+    font-size: 14px;
+  }
   main {
     padding-bottom: 20px;
   }
@@ -774,9 +945,45 @@ h1 {
       "content content"
       "skill skill"
       "resume resume"
-      "portofolio portofolio";
+      "portofolio portofolio"
+      "contact contact"
+      "footer footer";
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+  }
+
+  /* Contact Section*/
+  .form-container {
+    width: 70%;
+  }
+
+  .form-container .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  /* Footer Section*/
+  .footer {
+    width: 100%;
+  }
+  .footer .row {
+    flex-direction: row;
+  }
+
+  .footer .col {
+    margin: auto;
+  }
+  .footer .col:nth-child(1),
+  .footer .col:nth-child(2) {
+    border-right: 0.5px solid rgba(255, 255, 255, 0.534);
+  }
+  .footer .col:nth-child(3) {
+    border-right: none;
+  }
+  .footer p,
+  .footer a {
+    font-size: 14px;
   }
 
   main {
@@ -813,7 +1020,7 @@ h1 {
     margin: 0;
     padding: 0;
   }
-  
+
   .profil-container h1 {
     font-size: 28px;
   }
@@ -862,11 +1069,47 @@ h1 {
     gap: 20px;
   }
 
+  /* Contact Section*/
+  .form-container {
+    width: 80%;
+  }
+
+  .form-container .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+ 
+
   /* Header Navigation */
   .header-saya {
     height: auto;
     min-height: 50px;
     padding: 0 20px;
+  }
+
+  .footer {
+    width: 100%;
+  }
+  .footer .row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer .col {
+    margin: auto;
+  }
+  .footer .col:nth-child(1),
+  .footer .col:nth-child(2) {
+    border-right: 0.5px solid rgba(255, 255, 255, 0.534);
+  }
+  .footer .col:nth-child(3) {
+    border-right: none;
+  }
+  .footer p,
+  .footer a {
+    font-size: 13px;
   }
 
   .menu-nav {
@@ -1073,7 +1316,8 @@ h1 {
     outline: none !important;
   }
 
-  html, body {
+  html,
+  body {
     font-size: 14px;
     padding: 0;
     margin: 0;
@@ -1091,16 +1335,56 @@ h1 {
       "content"
       "skill"
       "resume"
-      "portofolio";
+      "portofolio"
+      "contact"
+      "footer";
   }
 
-  /* Header */
+  /* Contact Section */
+  .form-container {
+    width: 85%;
+  }
+
+  .form-container .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .form-container .col:nth-child(2) {
+    margin-top: 20px;
+  }
+
+  /* Header Section */
   .header-saya {
     height: auto;
     min-height: 48px;
     padding: 0 8px;
     border-radius: 0 0 10px 10px;
     font-size: 15px;
+  }
+
+  .footer {
+    width: 100%;
+  }
+  .footer .row {
+    flex-direction: column;
+  }
+
+  .footer .col {
+    margin: auto;
+  }
+  .footer .col:nth-child(1),
+  .footer .col:nth-child(2) {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.534);
+    border-right: none;
+  }
+  .footer .col:nth-child(3) {
+    border-bottom: none;
+  }
+  .footer p,
+  .footer a {
+    font-size: 12px;
   }
 
   .navbar-saya {
@@ -1231,7 +1515,7 @@ h1 {
     max-width: 100%;
     margin: 0 auto;
   }
-  
+
   .skills-container .row h1 {
     font-size: 16px;
     margin-bottom: 8px;

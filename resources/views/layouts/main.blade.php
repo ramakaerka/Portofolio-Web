@@ -57,9 +57,80 @@
             </div>
         </div>
         @yield('foto')
+
+        <div class="contact" id="contact">
+            <form action="" method="POST">
+                @csrf
+                <div class="form-container">
+                    <h4>Send Me a Message</h4>
+                    <p>Whether it's to discuss an opportunity or to trade ideas about web development, I'm excited to
+                        chat!</p>
+                    <div class="row">
+                        <div class="col">
+                            <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                placeholder="John Doe" required>
+                        </div>
+                        <div class="col">
+                            <label for="exampleFormControlInput2" class="form-label">Your Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput2"
+                                placeholder="name@example.com" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="exampleFormControlInput2" class="form-label">Your Company (Optional)</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput2"
+                                placeholder="Your Company">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="exampleFormControlInput2" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput2"
+                                placeholder="Your Subject" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Write about your message or idea"
+                                rows="5" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary">Submit Message</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </form>
+        <div class="footer">
+        <div class="row">
+            <div class="col">
+                <p>Crafted with passion</p>
+
+                <p>&copy; 2025 Rama Kadi Rawi Kuncaranto.</p>
+            </div>
+            <div class="col">
+                <p>Follow me on social media:</p>
+
+                <a href="#">Linkedin |</a>
+                <a href="#">Github |</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="col">
+                <p>Contact Me</p>
+                <p>ramakaerka@gmail.com</p>
+            </div>
+        </div>
+    </div>
     </div>
     
-  
+    </div>
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
