@@ -1,9 +1,13 @@
 <?php
 
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
+use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestEmail;
+use Illuminate\Session\Middleware\StartSession;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +26,8 @@ Route::get('/', function () {
 Route::get('/leave_system', function () {
     return view('projects.leave_system');
 });
+
+Route::post('/send-email', [ContactController::class, 'sendEmail'])->name('send.email');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

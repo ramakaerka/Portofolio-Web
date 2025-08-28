@@ -1,11 +1,12 @@
 @extends('layouts.main')
 @section('content')
+    
     <div class="profil-container">
         <div class="row">
             <div class="col">
                 <h1>Rama Kadi Rawi Kuncaranto</h1>
                 <p>I'm a <span>Junior Fullstack Web Developer</span></p>
-                <p>Passionate to turn ideas into reality and solving business problems  with digital technology</p>
+                <p>Passionate to turn ideas into reality and solving business problems with digital technology</p>
                 <a href="#exampleFormControlInput1" class="btn-contact">
                     <span class="sparkle-icon">✨</span>
                     Contact Me
@@ -104,7 +105,8 @@
             </div>
             <div class="col">
                 <h4>Web Based Employee Leave Application Information System</h4>
-                <p>This web-based information system was created to meet the needs of organizations for leave management, leave application and leave approval processes.</p>
+                <p>This web-based information system was created to meet the needs of organizations for leave management,
+                    leave application and leave approval processes.</p>
                 <a href="/leave_system" class="btn-contact">View Project</a>
             </div>
         </div>

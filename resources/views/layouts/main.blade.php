@@ -20,6 +20,7 @@
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
 
     <div class="grid-container">
+
         <header class="header-saya">
             <nav class="navbar-saya">
                 <ul class="menu-nav">
@@ -37,9 +38,25 @@
                     </li>
                 </ul>
             </nav>
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible fade show mt-3 mb-3" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+
+            @if (session('error'))
+                <div class="alert alert-danger alert-dismissible fade show mt-3 mb-3" role="alert">
+                    {{ session('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
         </header>
 
+
+
         <main class="main-home" id="home">
+
             @yield('content')
         </main>
 
@@ -59,7 +76,7 @@
         @yield('foto')
 
         <div class="contact" id="contact">
-            <form action="" method="POST">
+            <form action="/send-email" method="POST">
                 @csrf
                 <div class="form-container">
                     <h4>Send Me a Message</h4>
@@ -68,34 +85,34 @@
                     <div class="row">
                         <div class="col">
                             <label for="exampleFormControlInput1" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" name="name" class="form-control" id="exampleFormControlInput1"
                                 placeholder="John Doe" required>
                         </div>
                         <div class="col">
                             <label for="exampleFormControlInput2" class="form-label">Your Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput2"
+                            <input type="email" name="email" class="form-control" id="exampleFormControlInput2"
                                 placeholder="name@example.com" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <label for="exampleFormControlInput2" class="form-label">Your Company (Optional)</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput2"
+                            <input type="text" name="company" class="form-control" id="exampleFormControlInput2"
                                 placeholder="Your Company">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <label for="exampleFormControlInput2" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput2"
+                            <input type="text" name="subject" class="form-control" id="exampleFormControlInput2"
                                 placeholder="Your Subject" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Write about your message or idea"
-                                rows="5" required></textarea>
+                            <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
+                                placeholder="Write about your message or idea" rows="5" required></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -110,9 +127,6 @@
     </div>
 
     </div>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
