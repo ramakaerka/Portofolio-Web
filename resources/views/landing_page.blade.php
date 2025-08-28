@@ -5,7 +5,7 @@
             <div class="col">
                 <h1>Rama Kadi Rawi Kuncaranto</h1>
                 <p>I'm a <span>Junior Fullstack Web Developer</span></p>
-                <p>Information Systems graduates who have passion and experience in the field of web development</p>
+                <p>Passionate to turn ideas into reality and solving business problems  with digital technology</p>
                 <a href="#exampleFormControlInput1" class="btn-contact">
                     <span class="sparkle-icon">✨</span>
                     Contact Me
@@ -25,7 +25,7 @@
             </div>
             <div class="grid-frame">
                 <div class="frame">
-                    <img src="../img/Foto (1).png" alt="Contoh Gambar" class="foto">
+                    <img src="../img/profesional_2.png" alt="Contoh Gambar" class="foto">
                 </div>
             </div>
         </div>
@@ -115,7 +115,7 @@
     <div class="desc"> {{-- 2 column --}}
         <div class="deskripsi-resume"> {{-- flex column --}}
             <h4>Resume</h4>
-            <p>Here you will find more information about my recent education and work experience journey.</p>
+            <p>Here you will find more information about my recent education and projects experience journey.</p>
         </div>
     </div>
     <div class="detail">

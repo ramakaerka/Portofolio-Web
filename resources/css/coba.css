@@ -23,7 +23,7 @@ body {
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
 .btn-contact {
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #5c66f6 0%, #558ef7 100%);
   color: white;
   border: none;
   padding: 16px 32px;
@@ -36,10 +36,10 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2),
+  box-shadow: 0 0 20px rgba(92, 115, 246, 0.616), 0 0 40px rgba(92, 159, 246, 0.2),
     0 0 60px rgba(139, 92, 246, 0.1);
   text-decoration: none;
-  border: 1px solid rgba(168, 85, 247, 0.5);
+  border: 1px solid rgba(85, 101, 247, 0.5);
   backdrop-filter: blur(10px);
   width: 50%;
 }
@@ -48,7 +48,7 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 0 30px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.4),
     0 0 90px rgba(139, 92, 246, 0.2);
-  background: linear-gradient(135deg, #9333ea 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #33b0ea 0%, #8bb3ee 100%);
 }
 .btn-contact:active {
   transform: translateY(0px);
@@ -100,7 +100,7 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   width: 100%;
   height: auto;
   box-sizing: border-box;
@@ -195,7 +195,7 @@ body {
   z-index: 3;
   padding: 0;
   margin: 0;
-  background: linear-gradient(135deg, #394453 0%, #2e3950 100%);
+  background: linear-gradient(135deg, #242e68 0%, #2d5a94 100%);
   text-align: center;
   box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.6);
   border-bottom-left-radius: 10px;
@@ -555,7 +555,7 @@ h4 {
   flex-direction: row; /* untuk mengatur th/td secara horizontal */
   flex-wrap: wrap;
   justify-content: start;
-  gap: 20px;
+  gap: 0;
 }
 
 .skills p {
@@ -565,11 +565,15 @@ h4 {
   font-weight: 400;
   font-family: "Poppins", sans-serif;
 }
+.skills th {
+  width: 95px;
+  margin: 0;
+}
 .grid-frame {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   border-radius: 20px;
-  background: linear-gradient(50deg, #0110291f, #7152fddc);
+  background: linear-gradient(50deg, #1e4ea0, #3e4cc569);
   padding: 0;
   box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
   margin: 0;
@@ -583,7 +587,7 @@ h4 {
 .frame {
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #e7f5ff00, #ffffff00);
+  background: linear-gradient(180deg, #9dc4f786, #01094e6e);
   font-family: Arial, sans-serif;
   margin: auto;
   display: flex;
@@ -603,7 +607,7 @@ h4 {
 }
 
 .profil-container {
-  padding: 10px 20px;
+  padding: 10px 0 10px 20px;
   width: 100%;
   margin-top: 10px;
   box-sizing: border-box;
@@ -615,9 +619,13 @@ h4 {
   box-sizing: border-box;
 }
 
-.profil-container .col {
+.profil-container .row {
   width: 800px;
   margin-right: 0;
+}
+
+.profil-container .col {
+  margin-right: 10px;
 }
 
 .profil-container p {
@@ -652,8 +660,8 @@ h1 {
   gap: 8px;
 }
 .icon {
-  width: clamp(20px, 6vw, 60px);
-  height: clamp(20px, 6vw, 60px);
+  width: clamp(20px, 6vw, 45px);
+  height: clamp(20px, 6vw, 45px);
   object-fit: contain;
   transition: all 0.3s ease;
 }
@@ -708,6 +716,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px 0 0 0;
   }
 
   .profil-container {
@@ -723,9 +732,10 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 40px; /* Atur sesuai kebutuhan, misal 48px */
+    width: 100%;
   }
   .profil-container .col {
-    width: 50vw; /* Ubah dari 800px menjadi setengah layar */
+    /* Ubah dari 800px menjadi setengah layar */
     max-width: 500px; /* Batas maksimal agar tidak terlalu lebar */
     min-width: 320px;
   }
@@ -743,7 +753,8 @@ h1 {
   .skills {
     grid-area: skill;
     width: 100%;
-    margin: 0 auto 30px auto;
+    padding : 10px;
+    margin: 0 auto 10px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -753,9 +764,17 @@ h1 {
     text-align: center;
   }
   .skills-container {
+    padding: 0 0 20px 0;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+  }
+
+  .skills .table {
+    margin-bottom: 0;
+  }
+  .skills tr {
+    margin: auto;
   }
 }
 /* Tablet dan iPad (921px - 1024px) */
@@ -809,14 +828,15 @@ h1 {
     font-size: 14px;
   }
   main {
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
 
   .profil-container .row {
+    padding: 0 25px;
     width: 100%;
   }
   .profil-container .col {
-    width: 500px;
+    max-width: 500px;
     height: auto;
     margin: 0;
     display: flex;
@@ -826,7 +846,7 @@ h1 {
   }
 
   .profil-container p {
-    width: 500px;
+    width: auto;
   }
   .grid-frame {
     width: 300px;
@@ -843,7 +863,7 @@ h1 {
   }
 
   .btn-contact {
-    width: 40%;
+    width: 50%;
     justify-content: center;
   }
 
@@ -864,13 +884,14 @@ h1 {
   }
   .skills tr {
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 0;
     justify-content: center;
+    margin: auto;
   }
 
   .icon {
-    width: clamp(40px, 8vw, 50px);
-    height: clamp(40px, 8vw, 50px);
+    width: clamp(40px, 8vw, 45px);
+    height: clamp(40px, 8vw, 45px);
   }
 
   /* Resume Section */
@@ -1007,7 +1028,7 @@ h1 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 30px; /* Sedikit lebih kecil dari desktop */
+    gap: 20px; /* Sedikit lebih kecil dari desktop */
     margin: 0;
   }
   .profil-container .col {
@@ -1022,13 +1043,14 @@ h1 {
   }
 
   .profil-container h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
   .profil-container p {
-    width: 400px;
+    width: auto;
     margin-bottom: 10px;
   }
   .btn-contact {
+    margin-top: 20px;
     width: 210px;
   }
 
@@ -1041,12 +1063,12 @@ h1 {
   .skills {
     grid-area: skill;
     width: 100%;
-    margin: 0 auto 24px auto;
+    margin: 0 auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px 10px;
+    padding: 0px 10px;
   }
   .skills-container {
     width: 100%;
@@ -1055,6 +1077,14 @@ h1 {
   }
   .skills-container .row {
     text-align: center;
+  }
+  .skills-container tr {
+    margin: 0;
+    gap: 0;
+  }
+  .icon {
+    width: clamp(40px, 8vw, 40px);
+    height: clamp(40px, 8vw, 40px);
   }
 }
 
@@ -1133,6 +1163,16 @@ h1 {
     text-align: center;
   }
 
+  .profil-container {
+    padding-bottom: 0;
+  }
+  .profil-container .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   .profil-container .col {
     display: flex;
     flex-direction: column;
@@ -1159,8 +1199,7 @@ h1 {
 
   /* Button contact */
   .btn-contact {
-    width: 40%;
-
+    width: 45%;
     margin: 20px auto;
     padding: 14px 24px;
     font-size: 16px;
@@ -1177,9 +1216,11 @@ h1 {
   /* Skills section */
   .skills {
     padding: 0px 10px;
+    align-items: center;
   }
 
   .skills-container {
+    max-width: 600px;
     padding: 0;
   }
 
@@ -1194,11 +1235,13 @@ h1 {
     flex-direction: column;
     align-items: center;
     margin-bottom: 0;
+    padding: 10px 0;
+    width: 90px;
   }
 
   .icon {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     margin-bottom: 8px;
   }
 
@@ -1268,6 +1311,15 @@ h1 {
   }
 
   /* Portfolio section */
+  .section-portofolio {
+    width: 100%;
+    margin: 0 auto;
+  }
+ 
+  .portofolio-header {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
   .portofolio-header h4 {
     width: 50%;
     font-size: 20px;
@@ -1279,14 +1331,14 @@ h1 {
   }
 
   .frame-img-portofolio {
-    height: 400px;
+    height: 100%;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .img-portofolio {
     width: 100%;
-    height: 70%;
+    height: 100%;
   }
   .portofolio-content .row {
     flex-direction: column;
@@ -1296,12 +1348,13 @@ h1 {
   .portofolio-content .col {
     padding: 0 30px 0 30px;
     width: 100%;
-    margin-bottom: 20px;
+    margin: 0;
   }
 
   .portofolio-content p {
     padding: 20px 20px 10px 20px;
     font-size: 16px;
+    margin-top: 0;
   }
   .portofolio-content h4 {
     padding: 0 20px 0 20px;
@@ -1340,11 +1393,26 @@ h1 {
       "footer";
   }
 
+  .contact {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contact h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .contact p {
+    font-size: 12px;
+  }
   /* Contact Section */
   .form-container {
     width: 85%;
   }
-
+  .form-container label, .form-container input {
+    font-size: 12px;
+  }
   .form-container .row {
     display: flex;
     flex-direction: column;
@@ -1405,7 +1473,9 @@ h1 {
 
   /* Main content */
   main {
+    width: 90%;
     padding: 12px 0 0 0;
+    margin: 0 auto;
     border-radius: 0;
     box-shadow: none;
   }
@@ -1503,29 +1573,31 @@ h1 {
 
   /* Skills section */
   .skills {
+    width: 90%;
     padding: 8px 2px;
-    margin: 0;
+    margin: 0 auto;
     border-radius: 10px;
     align-items: center;
   }
   .skills-container {
     padding: 0;
     border-radius: 8px;
-    width: 100%;
+    width: 90%;
     max-width: 100%;
     margin: 0 auto;
   }
 
   .skills-container .row h1 {
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 25px;
     text-align: center;
   }
   .skills tr {
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 5px;
     justify-content: center;
     align-items: center;
+    margin: auto;
   }
   .skills th {
     width: 54px;
@@ -1548,19 +1620,20 @@ h1 {
 
   /* Resume section */
   .section-resume {
+    width: 90%;
     height: auto;
     min-height: 300px;
     border-radius: 10px;
     box-shadow: none;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 0 0;
   }
   .resume-container {
     grid-template-areas:
       "desc"
       "detail";
     grid-template-columns: 1fr;
-    padding: 8px;
+    padding: 20px;
     border-radius: 10px;
   }
   .desc {
@@ -1626,6 +1699,10 @@ h1 {
   }
 
   /* Portfolio section */
+  .portofolio-container {
+    width: 90%;
+    margin: 0 auto;
+  }
   .portofolio-header {
     padding: 8px 0;
     margin-bottom: 4px;
@@ -1643,8 +1720,8 @@ h1 {
     margin: 0 auto 6px auto;
   }
   .frame-img-portofolio {
-    min-height: 200px;
-    max-height: 200px;
+    min-height: 180px;
+    max-height: 180px;
     width: 100%;
     margin-bottom: 10px;
     border-radius: 10px;
