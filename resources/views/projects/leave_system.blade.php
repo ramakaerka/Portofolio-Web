@@ -43,6 +43,8 @@
                                     aria-label="Slide 6"></button>
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
                                     aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                                    aria-label="Slide 8"></button>
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item contain active">
@@ -53,6 +55,9 @@
                                 </div>
                                 <div class="carousel-item contain">
                                     <img src="../img/asset1/Persetujuan.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item contain">
+                                    <img src="../img/asset1/status_cuti_saya.png" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="carousel-item contain">
                                     <img src="../img/asset1/Add user karyawan.png" class="d-block w-100" alt="...">
