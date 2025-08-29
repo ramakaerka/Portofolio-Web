@@ -8,6 +8,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/css/coba.css',
                 'resources/css/bingkai.css',
+                'resources/css/detail_portofolio.css',
                 'resources/js/app.js',
                 'resources/js/script.js',
             ],
