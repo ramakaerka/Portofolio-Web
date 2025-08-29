@@ -4,10 +4,26 @@
     "src": "resources/css/app.css",
     "isEntry": true
   },
+  "resources/css/bingkai.css": {
+    "file": "assets/bingkai-RVIDZXLe.css",
+    "src": "resources/css/bingkai.css",
+    "isEntry": true
+  },
+  "resources/css/coba.css": {
+    "file": "assets/coba-C812NmYU.css",
+    "src": "resources/css/coba.css",
+    "isEntry": true
+  },
   "resources/js/app.js": {
     "file": "assets/app-DaBYqt0m.js",
     "name": "app",
     "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/script.js": {
+    "file": "assets/script-CVIZUpSR.js",
+    "name": "script",
+    "src": "resources/js/script.js",
     "isEntry": true
   }
 }
